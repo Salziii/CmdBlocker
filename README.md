@@ -1,6 +1,7 @@
 # CmdBlocker
 
 ## Dependencies
+-  [BungeeCord](https://ci.md-5.net/job/BungeeCord/)
 - [Protocolize](https://github.com/Exceptionflug/protocolize)
 
 ## Features
