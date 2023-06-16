@@ -11,6 +11,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
 
+@SuppressWarnings("unused")
 public class Config {
 
     private static final ThreadLocal<Yaml> yaml = ThreadLocal.withInitial(() -> {
@@ -86,7 +87,7 @@ public class Config {
     }
 
     public Collection<String> getKeys() {
-        return new ArrayList<String>(map.keySet());
+        return new ArrayList<>(map.keySet());
     }
 
     public String getString(String key) {
@@ -111,19 +112,16 @@ public class Config {
 
     public List<String> getStringList(String key) {
         Object val = get(key);
-        if (val instanceof List) {
-            List<?> origin = (List<?>) val;
-            List<String> results = new ArrayList<String>(origin.size());
-
+        if (val instanceof List<?> origin) {
+            List<String> results = new ArrayList<>(origin.size());
             for (Object o : (List<?>) val) {
                 if (o instanceof String) {
                     results.add((String) o);
                 }
             }
-
             return results;
         }
-        return new ArrayList<String>();
+        return new ArrayList<>();
     }
 
     public boolean contains(String key) {

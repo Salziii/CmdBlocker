@@ -29,8 +29,4 @@ public abstract class Type {
         return false;
     }
 
-    public boolean checkPermission(User u) {
-        return Main.getBypassPermission() != null && u.hasPermission(Main.getBypassPermission());
-    }
-
 }

@@ -15,6 +15,7 @@ public class ConfigLoader {
         this.configFile = new File(baseFile, name);
     }
 
+    @SuppressWarnings("unused")
     public Config reloadConfig() {
         baseFile.mkdirs();
         Config internalConfig = loadInternalConfig();
@@ -69,6 +70,7 @@ public class ConfigLoader {
             baseFile.mkdirs();
             configFile.createNewFile();
             try (InputStream in = this.getClass().getClassLoader().getResourceAsStream("config.yml"); OutputStream os = Files.newOutputStream(configFile.toPath())) {
+                assert in != null;
                 ByteStreams.copy(in, os);
             }
         } catch (IOException ignored) {}

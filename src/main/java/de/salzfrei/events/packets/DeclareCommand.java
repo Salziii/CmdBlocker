@@ -20,6 +20,7 @@ public class DeclareCommand extends Protocolize<Commands> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void packetSend(PacketSendEvent<Commands> e) {
         CommandMemory.MEMORY.put(e.player().uniqueId(), e.packet().getRoot().getChildren());
         RootCommandNode<?> root = e.packet().getRoot();

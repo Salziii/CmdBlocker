@@ -18,12 +18,4 @@ public class User {
         return player.hasPermission(permission);
     }
 
-    public Object getKey() {
-        return player.getUniqueId();
-    }
-
-    public Object getContext() {
-        return player.getServer();
-    }
-
 }
