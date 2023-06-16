@@ -1,5 +1,0 @@
-name: CMDBlocker
-version: '1.0.0'
-main: de.salzfrei.Main
-author: Salzfrei
-depends: [Protocolize]
