@@ -1,0 +1,5 @@
+name: CMDBlocker
+version: '${project.version}'
+main: de.salzfrei.Main
+author: Salzfrei
+depends: [Protocolize]
