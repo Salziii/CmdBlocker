@@ -1,9 +1,8 @@
-package de.salzfrei.events;
+package de.salzfrei.events.packets;
 
 import com.mojang.brigadier.tree.CommandNode;
 import com.mojang.brigadier.tree.RootCommandNode;
-import de.salzfrei.objects.CommandMemory;
-import de.salzfrei.objects.ProtocolizePacketListener;
+import de.salzfrei.objects.cache.CommandMemory;
 import dev.simplix.protocolize.api.Direction;
 import dev.simplix.protocolize.api.listener.PacketReceiveEvent;
 import dev.simplix.protocolize.api.listener.PacketSendEvent;
@@ -14,9 +13,9 @@ import net.md_5.bungee.protocol.packet.Commands;
 
 import java.util.Iterator;
 
-public class PacketDeclareCommandsListener extends ProtocolizePacketListener<Commands> {
+public class DeclareCommand extends Protocolize<Commands> {
 
-    public PacketDeclareCommandsListener() {
+    public DeclareCommand() {
         super(Commands.class, Direction.UPSTREAM, 0);
     }
 

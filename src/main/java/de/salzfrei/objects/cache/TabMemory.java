@@ -1,4 +1,4 @@
-package de.salzfrei.objects;
+package de.salzfrei.objects.cache;
 
 import java.util.concurrent.ConcurrentHashMap;
 

@@ -1,0 +1,15 @@
+deny message: "&8[&cServer&4MLM&8] &7| &7This Command doesn't exist! Use &4/&chelp &7for information&7!"
+
+type: blacklist
+# built-in types:
+# - whitelist -> A whitelist allows commands that match the filter, blocking everything else.
+# - blacklist -> A blacklist denies commands that match the filter, allowing everything else.
+
+bypass permission: "cmdblocker.bypass"
+
+patterns: # Regex: https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html
+  - "\\?.*" # /?
+  - "\\S*:.*" # all <plugin>:<command>
+  - "pl(ugins)?" # /pl & /plugins
+  - "ver(sion)?" # version
+  - "about" # about

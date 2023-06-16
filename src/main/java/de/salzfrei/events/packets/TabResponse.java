@@ -1,20 +1,18 @@
-package de.salzfrei.events;
+package de.salzfrei.events.packets;
 
 import com.mojang.brigadier.suggestion.Suggestions;
 import de.salzfrei.Main;
-import de.salzfrei.objects.CommandMemory;
-import de.salzfrei.objects.ProtocolizePacketListener;
 import dev.simplix.protocolize.api.Direction;
 import dev.simplix.protocolize.api.listener.PacketReceiveEvent;
 import dev.simplix.protocolize.api.listener.PacketSendEvent;
 import de.salzfrei.objects.User;
 import net.md_5.bungee.protocol.packet.TabCompleteResponse;
-import de.salzfrei.objects.TabMemory;
+import de.salzfrei.objects.cache.TabMemory;
 
-public class PacketTabResponseListener extends ProtocolizePacketListener<TabCompleteResponse> {
+public class TabResponse extends Protocolize<TabCompleteResponse> {
 
 
-    public PacketTabResponseListener() {
+    public TabResponse() {
         super(TabCompleteResponse.class, Direction.UPSTREAM, 0);
     }
 

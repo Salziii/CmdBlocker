@@ -1,15 +1,14 @@
-package de.salzfrei.events;
+package de.salzfrei.events.packets;
 
-import de.salzfrei.objects.ProtocolizePacketListener;
-import de.salzfrei.objects.TabMemory;
+import de.salzfrei.objects.cache.TabMemory;
 import dev.simplix.protocolize.api.Direction;
 import dev.simplix.protocolize.api.listener.PacketReceiveEvent;
 import dev.simplix.protocolize.api.listener.PacketSendEvent;
 import net.md_5.bungee.protocol.packet.TabCompleteRequest;
 
-public class PacketTabRequestListener extends ProtocolizePacketListener<TabCompleteRequest> {
+public class TabRequest extends Protocolize<TabCompleteRequest> {
 
-    public PacketTabRequestListener() {
+    public TabRequest() {
         super(TabCompleteRequest.class, Direction.UPSTREAM, 0);
     }
 
