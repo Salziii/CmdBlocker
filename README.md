@@ -10,6 +10,7 @@
 - Both the execution of the command and Tab Complete are blocked
 - A permission to bypass the commands excluded from the config
 - A command to reload the config and display the plugin information
+- Overwrites all /help commands provided by minecraft, and replaces the content with the commands possible for the player
 - Configuration adjustable
    - ```deny message``` -> The message sent when the player executes a command that is blocked for them
    - ```bypass permission``` -> Permission to bypass commands excluded from config, ```Default -> cmdblocker.bypass```
