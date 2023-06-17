@@ -2,7 +2,7 @@
 
 ## Dependencies
 -  [BungeeCord](https://ci.md-5.net/job/BungeeCord/)
-- [Protocolize](https://github.com/Exceptionflug/protocolize)
+- [Protocolize](https://github.com/Exceptionflug/protocolize) (Used to manipulate the packets responsible for the TabCompleteon)
 
 ## Features
 - Blocks all commands that don't exist
