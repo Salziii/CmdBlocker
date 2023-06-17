@@ -9,8 +9,6 @@ import java.util.regex.Pattern;
 
 public abstract class Type {
 
-
-
     public abstract boolean isAllowed(User u, String c);
 
     public boolean match(String command) {
